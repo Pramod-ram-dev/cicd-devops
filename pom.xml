@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+                             
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.nextwork.app</groupId>
+  <artifactId>nextwork-web-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>nextwork-web-project Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- ✅ Dependencies -->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- ✅ Build Configuration -->
+  <build>
+    <finalName>nextwork-web-project</finalName>
+  </build>
+
+  <!-- ✅ Corrected Distribution Management -->
+  <distributionManagement>
+    <!-- Snapshot Repository (for -SNAPSHOT versions) -->
+    <snapshotRepository>
+      <id>cicd-devops</id> <!-- ID must match your ~/.m2/settings.xml -->
+      <url>https://cicd-devops-674949853905.d.codeartifact.us-east-1.amazonaws.com/maven/cicd/</url>
+    </snapshotRepository>
+
+    <!-- Release Repository (for versions without -SNAPSHOT) -->
+    <repository>
+      <id>cicd-devops-cicd</id>
