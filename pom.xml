@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/maven-v4_0_0.xsd">
@@ -31,10 +31,14 @@
   <distributionManagement>
     <!-- Snapshot Repository (for -SNAPSHOT versions) -->
     <snapshotRepository>
-      <id>cicd-devops</id> <!-- ID must match your ~/.m2/settings.xml -->
-      <url>https://cicd-devops-674949853905.d.codeartifact.us-east-1.amazonaws.com/maven/cicd/</url>
+      <id>cicd-devops-cicd-devops</id> <!-- ID must match your ~/.m2/settings.xml -->
+      <url>https://cicd-devops-674949853905.d.codeartifact.ap-south-1.amazonaws.com/maven/cicd-devops/</url>
     </snapshotRepository>
 
     <!-- Release Repository (for versions without -SNAPSHOT) -->
     <repository>
-      <id>cicd-devops-cicd</id>
+      <id>cicd-devops-cicd-devops</id> <!-- ID must match your ~/.m2/settings.xml -->
+      <url>https://cicd-devops-674949853905.d.codeartifact.ap-south-1.amazonaws.com/maven/cicd-devops/</url>
+    </repository>
+  </distributionManagement>
+</project>

@@ -3,25 +3,25 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
   
   <servers>
-    <server>
-      <id>codeartifact</id> <!-- Must match pom.xml -->
-      <username>aws</username>
-      <password>eyJ2ZXIiOjEsImlzdSI6MTc0NDUyNTAyOSwiZW5jIjoiQTEyOEdDTSIsInRhZyI6IjQtZEs5dTUwTWVSaUpzcTZsNndXVmciLCJleHAiOjE3NDQ1NjgyMjksImFsZyI6IkExMjhHQ01LVyIsIml2IjoiZzFWV21zVU5WV0ZiNkFEWCJ9.3UfQOz8_YZvColk_urSRRA.aIgZ_v7HrvB47T1c.L87d4x8T33C8EiT0phCi10fnJSBtbT-c8T0cHTGE-LcxyMEAuch6t-D4iipQaSkADClCUXKzIGOZLR9fWwb45qW1Fz4CNbkQcBs1J97qWqDjVX-xCsZbScLazrvtkASN_-6z9c6VuN5UnCzLx81HJAshOgCzmO48avPIPdELUEm5uQ6mJFovtalD51a4KQ_yMq-qbOH2aq7fS8-jA9hi4gz_i5BkrLITr441gVaXk1XwQ5bTE74qGlito6sSRcJ2ygY3uANC8km9IQrW5jkONReROCwhgHshqrev_YjFvS1qMlB19J4T5SX6VR31DjzsKnxnk4RUp8H8zzjv27SDloIv_oje3ElqmIAZS8aFksbHOZ2IcRPP4oa022ZP7wSo04jt8cXP06iXeub8-zmOx9fFGqoy9vfA_fhq_LrnNkqRW57rojkCmnpoaL6LSY5ws2JAbYJd4y8KxeFxyd4zDYC2pmTsa1sNAF-5YoSQ1yS6PrPTReS7CRwz8xZlEuqhCqeRPNh_sqpkQ_72EPnwQYj30u0-r_XPFXo5N1bkyPRJEJS9zy7FQX-xJHPWmAEjETeA1tmLISmAQVTtyvjDyy7orkZKZ_Oqlj5tXyVNfW-yNJyrwtlh19nG4TYB1Z49YjU8nX5x8U8oeN3eSvjnxLQ04zd8hs-IBLVtWuZPsD7mMiWXVFNg-ddMJ5ATIdCSr0YlqRnT5188UbHmCQR4adR10mCnvJ0RxFivHoNHnae0HbkOIxt-zOIXHI6IQIsvp1vaieO-XiERh-LqX-2hhqD-CbQ65X7XltG0C23jdZoZt4v5R74psnWWY4YU-UaLGMg12CsvU_ZeeTdZjtRXOR6Uim21ccYyjCy4ofF6vQ8NKTxGt7uao635XUh0t6xtTpWwonhW9GBoYescHhIpbdaNYilZul9Zex-Zpkot8vvwhxz01EJMREY_Ny1-2NOTPUUYhw8uK4Fk_uPoRPWiAQNiRs9JjFqYvaIXsB7Ueyd_cQ1R.XOw1tJNObX01NCFoL7VmrQ</password>
-    </server>
-  </servers>
+  <server>
+    <id>cicd-devops-cicd-devops</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
 
   <profiles>
-    <profile>
-      <id>codeartifact-profile</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <repositories>
-        <repository>
-          <id>codeartifact</id>
-          <url>https://cicd-devops-674949853905.d.codeartifact.us-east-1.amazonaws.com/maven/cicd/</url>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
+  <profile>
+    <id>cicd-devops-cicd-devops</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>cicd-devops-cicd-devops</id>
+        <url>https://cicd-devops-674949853905.d.codeartifact.ap-south-1.amazonaws.com/maven/cicd-devops/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
 </settings>

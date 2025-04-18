@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NextWork Web Project
 
 ## Overview
@@ -13,3 +14,7 @@ The NextWork Web App is a Java-based web application developed using Maven and d
 - **`pom.xml`** - The Maven Project Object Model file, managing project dependencies and build configurations.
 
 This project is part of the CI/CD series hosted by  [NextWorks](https://www.nextwork.org).
+=======
+# cicd-devops
+devops aws cicd pipeline
+>>>>>>> 1055447cfbed73d400d140e8fef567d3070144d8
